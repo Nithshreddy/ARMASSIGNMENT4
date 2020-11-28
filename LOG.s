@@ -13,7 +13,7 @@ __main  FUNCTION
           VLDR.F32 S4,=-1;multiplication factor
           VLDR.F32 S5,=1 ;i value (i=0)
 exp       CMP R1,R0;Compare 'n' and 'i'
-          BLE exp1;if i < n goto exp1
+          BGE exp1;if i < n goto exp1
           B STOP;else goto stop
 exp1      VMUL.F32 S1,S1,S2;t = t*x
           VMUL.F32 S1,S1,S4;t=-1*t*x
